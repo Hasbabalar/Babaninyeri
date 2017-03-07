@@ -10,7 +10,6 @@
     <Paddings Padding="0px" />
     <Border BorderWidth="0px" />
     <BorderBottom BorderWidth="1px" />
-    <%--Selamasdasasd-- %>
      
     <%-- DXCOMMENT: Configure ASPxGridView's columns in accordance with datasource fields --%>
     

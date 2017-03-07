@@ -22,26 +22,7 @@
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                         <div class="headerTop">
                             <div class="templateTitle">
-                                <a id="TitleLink" href="~/" runat="server">Project Title</a>
-                            </div>
-                            <div class="loginControl">
-                                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                                    <AnonymousTemplate>
-                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Log In</a> 
-                                        | 
-                                        <a href="~/Account/Register.aspx" runat="server" id="registerLink">Register</a>
-                                    </AnonymousTemplate>
-                                    <LoggedInTemplate>
-                                        Welcome <span class="bold">
-                                         
-                                            <asp:LoginName ID="HeadLoginName" runat="server" />
-                                         
-                                        </span>! [
-                                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
-                                            LogoutPageUrl="~/"  />
-                                        ]
-                                    </LoggedInTemplate>
-                                </asp:LoginView>
+                                <a id="TitleLink" href="~/" runat="server">NEREDE YESEK?</a>
                             </div>
                         </div>
                         <div class="headerMenu">

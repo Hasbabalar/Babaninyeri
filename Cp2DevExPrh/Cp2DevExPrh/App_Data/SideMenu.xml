@@ -1,27 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <menu>
-  <group Text="Platform">
-    <item Text="Windows" />
-    <item Text="Linux" />
-    <item Text="Mac OS" />
+  <group Text="Kullanici Secenekleri" >
+    <item Text="Kullanici Ekle" NavigateUrl="#" />
+    <item Text="Kullanici Bilgilerini Duzenle " NavigateUrl="#" />
+    <item Text="Kullanici Sil" NavigateUrl="#" />
   </group>
-  <group Text="SQL Server">
-    <item Text="SQL Server 2005" />
-    <item Text="SQL Server 2008" />
-    <item Text="SQL Server 2008 R2" />
+  <group Text="Restoran Secenekleri">
+    <item Text="Restoran Ekle" NavigateUrl="#" />
+    <item Text="Restoran Bilgilerini Duzenle" NavigateUrl="#" />
+    <item Text="Restoran Sil" NavigateUrl="#" />
   </group>
-  <group Text="Browser">
-    <item Text="Chrome" />
-    <item Text="Firefox" />
-    <item Text="Internet Explorer" />
-    <item Text="Safari" />
-    <item Text="Opera" />
+  <group Text="Restoran Oyla">
+    <item Text="Puanla"  NavigateUrl="#"  />
+    <item Text="Puanlamalari Indir" NavigateUrl="#"  />
   </group>
-  <group Text="Language">
-    <item Text="C#" />
-    <item Text="Visual Basic" />
-    <item Text="C++" />
-    <item Text="Java" />
-    <item Text="PHP" />
-  </group>
+  <group Text="Istatistikler" NavigateUrl="#"/>
 </menu>

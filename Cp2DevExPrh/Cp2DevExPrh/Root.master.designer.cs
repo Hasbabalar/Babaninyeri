@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cp2DevExPrh  {
+namespace Cp2DevExPrh {
     
     
     public partial class RootMaster {
@@ -49,13 +49,13 @@ namespace Cp2DevExPrh  {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor TitleLink;
         
         /// <summary>
-        /// HeadLoginView control.
+        /// HeaderMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView HeadLoginView;
+        protected global::DevExpress.Web.ASPxMenu HeaderMenu;
         
         /// <summary>
         /// MainPane control.
@@ -92,5 +92,14 @@ namespace Cp2DevExPrh  {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel2;
+        
+        /// <summary>
+        /// XmlDataSourceHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.XmlDataSource XmlDataSourceHeader;
     }
 }
