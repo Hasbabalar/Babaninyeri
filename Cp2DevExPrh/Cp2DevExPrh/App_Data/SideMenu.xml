@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <menu>
-  <group Text="Kullanici Secenekleri" >
-    <item Text="Kullanici Ekle" NavigateUrl="UserOperations/AddUser.aspx" />
-    <item Text="Kullanici Bilgilerini Duzenle " NavigateUrl="UserOperations/EditUser.aspx" />
-    <item Text="Kullanici Sil" NavigateUrl="UserOperations/DeleteUser.aspx" />
+  <group Text="Kullanıcı Seçenekleri" >
+    <item Text="Kullanıcı Ekle" NavigateUrl="UserOperations/AddUser.aspx" />
+    <item Text="Kullanıcı Bilgilerini Düzenle " NavigateUrl="UserOperations/EditUser.aspx" />
+    <item Text="Kullanıcı Sil" NavigateUrl="UserOperations/DeleteUser.aspx" />
   </group>
-  <group Text="Restoran Secenekleri">
+  <group Text="Restoran Seçenekleri">
     <item Text="Restoran Ekle" NavigateUrl="#" />
-    <item Text="Restoran Bilgilerini Duzenle" NavigateUrl="#" />
+    <item Text="Restoran Bilgilerini Düzenle" NavigateUrl="#" />
     <item Text="Restoran Sil" NavigateUrl="#" />
   </group>
   <group Text="Restoran Oyla">
     <item Text="Puanla"  NavigateUrl="#"  />
-    <item Text="Puanlamalari Indir" NavigateUrl="#"  />
+    <item Text="Puanlamaları İndir" NavigateUrl="#"  />
   </group>
-  <group Text="Istatistikler" NavigateUrl="#"/>
+  <group Text="İstatistikler" NavigateUrl="#"/>
 </menu>

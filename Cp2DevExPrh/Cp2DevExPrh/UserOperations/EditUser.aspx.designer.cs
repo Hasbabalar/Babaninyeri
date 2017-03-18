@@ -20,5 +20,14 @@ namespace Cp2DevExPrh.UserOperations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox tbUserName;
+        
+        /// <summary>
+        /// btnEditUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnEditUser;
     }
 }
