@@ -157,9 +157,6 @@
     <Content Include="Global.asax" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Light.master" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Main.master" />
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +168,6 @@
     <Content Include="UserOperations\EditUser.aspx" />
     <Content Include="Web.config" />
     <Content Include="packages.config" />
-    <Fakes Include="Fakes\DevExpress.Web.Resources.v16.2.fakes" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,13 +185,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Light.master.cs">
-      <DependentUpon>Light.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Light.master.designer.cs">
-      <DependentUpon>Light.master</DependentUpon>
     </Compile>
     <Compile Include="Main.master.cs">
       <DependentUpon>Main.master</DependentUpon>
