@@ -159,6 +159,7 @@
     <Content Include="Main.master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="refs\cp2devExPrh.dll.licenses" />
     <Content Include="refs\Cp2DevExPrh.pdb" />
     <Content Include="refs\DevExpress.Charts.v13.2.Core.dll" />
     <Content Include="refs\DevExpress.Data.v13.2.dll" />
