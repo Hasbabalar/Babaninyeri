@@ -42,7 +42,71 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v13.2.Core">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Charts.v13.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Data.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.2.Core">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Office.v13.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.PivotGrid.v13.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Printing.v13.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.RichEdit.v13.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.2.Core">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Sparkline.v13.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Utils.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.Web.Resources.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v13.2.Service">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Xpf.Printing.v13.2.Service.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v13.2">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Xpo.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v13.2.Web">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.Xpo.v13.2.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.XtraCharts.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.XtraEditors.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.XtraReports.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.LightSwitch.Server">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.XtraReports.v13.2.LightSwitch.Server.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.Service">
+      <HintPath>..\packages\TMMS.DevExpress.1.3\lib\net45\DevExpress.XtraReports.v13.2.Service.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -102,6 +166,7 @@
     <Content Include="UserOperations\DeleteUser.aspx" />
     <Content Include="UserOperations\EditUser.aspx" />
     <Content Include="Web.config" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
