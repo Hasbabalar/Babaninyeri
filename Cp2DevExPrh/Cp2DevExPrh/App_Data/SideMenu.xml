@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <menu>
   <group Text="Kullanici Secenekleri" >
-    <item Text="Kullanici Ekle" NavigateUrl="#" />
-    <item Text="Kullanici Bilgilerini Duzenle " NavigateUrl="#" />
-    <item Text="Kullanici Sil" NavigateUrl="#" />
+    <item Text="Kullanici Ekle" NavigateUrl="UserOperations/AddUser.aspx" />
+    <item Text="Kullanici Bilgilerini Duzenle " NavigateUrl="UserOperations/EditUser.aspx" />
+    <item Text="Kullanici Sil" NavigateUrl="UserOperations/DeleteUser.aspx" />
   </group>
   <group Text="Restoran Secenekleri">
     <item Text="Restoran Ekle" NavigateUrl="#" />

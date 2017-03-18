@@ -25,13 +25,6 @@
                                 <a id="TitleLink" href="~/" runat="server">NEREDE YESEK?</a>
                             </div>
                         </div>
-                        <div class="headerMenu">
-                            <%-- DXCOMMENT: Configure the header menu --%>
-<dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" ItemAutoWidth="False" Width="100%" DataSourceID="XmlDataSourceHeader">
-</dx:ASPxMenu>
-
-
-                        </div>
                 </dx:PanelContent>
             </PanelCollection>
             <ExpandBarTemplate>
@@ -79,14 +72,7 @@
                         </div>
                 </dx:PanelContent>
             </PanelCollection>
-        </dx:ASPxPanel>
-
-    
-<%-- DXCOMMENT: Configure a datasource for the header menu --%>
-<asp:XmlDataSource ID="XmlDataSourceHeader" runat="server" DataFile="~/App_Data/TopMenu.xml"
-    XPath="/items/*"></asp:XmlDataSource>
-
-    
+        </dx:ASPxPanel> 
     </form>
 </body>
 </html>
