@@ -18,8 +18,10 @@ namespace Cp2DevExPrh.UserOperations
         {
             String userName = tbUserName.Text;
             String userMail = tbUserMail.Text;
+
             bool isValidUserName = true;
             bool isValidUserMail = true;
+            
             if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(userMail))
             {
                 SqlConnection con = new SqlConnection(@"Data Source=babalarserver.database.windows.net;Database=hasbabalarDB;Integrated Security=False;User ID=babalar;Password=Gelburayi123;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -31,6 +33,7 @@ namespace Cp2DevExPrh.UserOperations
                 SqlCommand cmdForNameCheck = new SqlCommand(checkUserNameIsExists, con);
 
                 SqlDataReader readerName = cmdForNameCheck.ExecuteReader();
+
                 while (readerName.Read())
                 {
 
@@ -44,7 +47,9 @@ namespace Cp2DevExPrh.UserOperations
                         break;
                     }
                 }
+
                 con.Close();
+
                 con.Open();
                 string checkUserMailIsExists = "SELECT KullaniciMaili FROM dbo.Kullanici";
 
@@ -65,7 +70,9 @@ namespace Cp2DevExPrh.UserOperations
                     }
                 }
                 con.Close();
+
                 con.Open();
+
                 if (isValidUserName == true && isValidUserMail == true) { 
 
                 String insertQuery = "INSERT INTO dbo.Kullanici (KullaniciAdi,KullaniciMaili) VALUES ('" + userName + "','" + userMail + "' );";
@@ -75,6 +82,7 @@ namespace Cp2DevExPrh.UserOperations
                 insertCmd.ExecuteNonQuery();
 
                 Response.Redirect("~/");
+
                 }
 
                 con.Close();
