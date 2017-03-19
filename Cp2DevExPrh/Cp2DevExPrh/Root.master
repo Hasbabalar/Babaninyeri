@@ -29,7 +29,7 @@
             </PanelCollection>
             <ExpandBarTemplate>
                 <div class="templateTitle">
-                    <a id="TitleLink" href="~/" runat="server">Project Title</a>
+                    <a id="TitleLink" href="~/" runat="server">NEREDE YESEK?</a>
                 </div>
             </ExpandBarTemplate>
         </dx:ASPxPanel>
@@ -42,10 +42,6 @@
                     headerMenu.SetOrientation(orientation);
             }
         </script>
-
-        <dx:ASPxGlobalEvents runat="server">
-            <ClientSideEvents ControlsInitialized="updateHeaderMenuOrientation" BrowserWindowResized="updateHeaderMenuOrientation" />
-        </dx:ASPxGlobalEvents>
 
 
         <dx:ASPxPanel ID="MainPane" runat="server" CssClass="mainContentPane">

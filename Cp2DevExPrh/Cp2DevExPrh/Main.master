@@ -11,11 +11,10 @@
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                         <div class="leftPanel">
                             <%-- DXCOMMENT: Configure the left panel's ASPxNavBar --%>
-<dx:ASPxNavBar ID="ASPxNavBar1" runat="server" AutoCollapse="True" EnableAnimation="True" Width="100%" DataSourceID="XmlDataSourceLeft">
-    <Border BorderWidth="0px" />
-    <Paddings Padding="0px" />
-</dx:ASPxNavBar>
-
+                            <dx:ASPxNavBar ID="ASPxNavBar1" runat="server" AutoCollapse="True" EnableAnimation="True" Width="100%" DataSourceID="XmlDataSourceLeft">
+                                <Border BorderWidth="0px" />
+                                <Paddings Padding="0px" />
+                            </dx:ASPxNavBar>
                         </div>
                 </dx:PanelContent>
             </PanelCollection>
