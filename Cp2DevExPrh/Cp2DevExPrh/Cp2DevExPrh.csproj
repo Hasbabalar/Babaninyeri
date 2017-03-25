@@ -181,7 +181,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Date.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
