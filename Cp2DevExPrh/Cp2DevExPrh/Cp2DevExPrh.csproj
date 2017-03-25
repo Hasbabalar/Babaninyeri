@@ -164,6 +164,7 @@
     <Content Include="Root.master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SendEmail.aspx" />
     <Content Include="UserOperations\AddUser.aspx" />
     <Content Include="UserOperations\DeleteUser.aspx" />
     <Content Include="UserOperations\EditUser.aspx" />
@@ -201,6 +202,13 @@
     </Compile>
     <Compile Include="Root.master.designer.cs">
       <DependentUpon>Root.master</DependentUpon>
+    </Compile>
+    <Compile Include="SendEmail.aspx.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendEmail.aspx.designer.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserOperations\AddUser.aspx.cs">
       <DependentUpon>AddUser.aspx</DependentUpon>
