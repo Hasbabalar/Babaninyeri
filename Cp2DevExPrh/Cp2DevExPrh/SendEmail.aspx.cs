@@ -19,7 +19,7 @@ namespace Cp2DevExPrh
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                 mail.From = new MailAddress("hasbabalar@gmail.com");
-                mail.To.Add("tikirmustafa@gmail.com");
+                mail.To.Add("hasbabalar@gmail.com");
                 mail.Subject = "Babalar Test Mail";
                 mail.Body = "This is for testing SMTP mail from GMAIL";
 
