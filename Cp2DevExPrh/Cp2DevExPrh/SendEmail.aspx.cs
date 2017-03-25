@@ -16,15 +16,15 @@ namespace Cp2DevExPrh
             try
             {
                 MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.webmail.com");
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("tikir@itu.edu.tr");
-                mail.To.Add("tikir@itu.edu.tr");
-                mail.Subject = "Test Mail";
+                mail.From = new MailAddress("hasbabalar@gmail.com");
+                mail.To.Add("tikirmustafa@gmail.com");
+                mail.Subject = "Babalar Test Mail";
                 mail.Body = "This is for testing SMTP mail from GMAIL";
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("username", "password");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("hasbabalar", "Gelburayi123");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
