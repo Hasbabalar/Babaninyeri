@@ -161,6 +161,9 @@
     <Content Include="Main.master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="RestaurantOperations\AddRestaurant.aspx" />
+    <Content Include="RestaurantOperations\DeleteRestaurant.aspx" />
+    <Content Include="RestaurantOperations\EditRestaurant.aspx" />
     <Content Include="Root.master" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +198,26 @@
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantOperations\AddRestaurant.aspx.cs">
+      <DependentUpon>AddRestaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RestaurantOperations\AddRestaurant.aspx.designer.cs">
+      <DependentUpon>AddRestaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurantOperations\DeleteRestaurant.aspx.cs">
+      <DependentUpon>DeleteRestaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RestaurantOperations\DeleteRestaurant.aspx.designer.cs">
+      <DependentUpon>DeleteRestaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurantOperations\EditRestaurant.aspx.cs">
+      <DependentUpon>EditRestaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurantOperations\EditRestaurant.aspx.designer.cs">
+      <DependentUpon>EditRestaurant.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Root.master.cs">
       <DependentUpon>Root.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
