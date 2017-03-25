@@ -4,7 +4,7 @@
 
 
     <h1 style="text-align:center;">Nerede yesek?</h1>
-        <p style="text-align:center;">Hoþ geldiniz.</p>
+        <p style="text-align:center;">Hos geldiniz.</p>
 
 <a href="http://www.accuweather.com/tr/tr/istanbul/318251/weather-forecast/318251" class="aw-widget-legal">
 <!--

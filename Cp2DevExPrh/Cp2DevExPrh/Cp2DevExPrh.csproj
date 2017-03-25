@@ -167,7 +167,7 @@
     <Content Include="Root.master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SendEmail.aspx" />
+    <Content Include="AlgorithmAndSendEmail.aspx" />
     <Content Include="UserOperations\AddUser.aspx" />
     <Content Include="UserOperations\DeleteUser.aspx" />
     <Content Include="UserOperations\EditUser.aspx" />
@@ -181,6 +181,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Date.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,12 +227,12 @@
     <Compile Include="Root.master.designer.cs">
       <DependentUpon>Root.master</DependentUpon>
     </Compile>
-    <Compile Include="SendEmail.aspx.cs">
-      <DependentUpon>SendEmail.aspx</DependentUpon>
+    <Compile Include="AlgorithmAndSendEmail.aspx.cs">
+      <DependentUpon>AlgorithmAndSendEmail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SendEmail.aspx.designer.cs">
-      <DependentUpon>SendEmail.aspx</DependentUpon>
+    <Compile Include="AlgorithmAndSendEmail.aspx.designer.cs">
+      <DependentUpon>AlgorithmAndSendEmail.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserOperations\AddUser.aspx.cs">
       <DependentUpon>AddUser.aspx</DependentUpon>

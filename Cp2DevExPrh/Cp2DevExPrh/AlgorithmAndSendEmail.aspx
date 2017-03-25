@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendEmail.aspx.cs" Inherits="Cp2DevExPrh.SendEmail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AlgorithmAndSendEmail.aspx.cs" Inherits="Cp2DevExPrh.SendEmail" %>
 
 <!DOCTYPE html>
 
