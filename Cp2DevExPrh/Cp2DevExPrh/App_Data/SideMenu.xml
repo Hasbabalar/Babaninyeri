@@ -6,9 +6,9 @@
     <item Text="Kullanıcı Sil" NavigateUrl="UserOperations/DeleteUser.aspx" />
   </group>
   <group Text="Restoran Seçenekleri">
-    <item Text="Restoran Ekle" NavigateUrl="#" />
-    <item Text="Restoran Bilgilerini Düzenle" NavigateUrl="#" />
-    <item Text="Restoran Sil" NavigateUrl="#" />
+    <item Text="Restoran Ekle" NavigateUrl="RestaurantOperations/AddRestaurant.aspx" />
+    <item Text="Restoran Bilgilerini Düzenle" NavigateUrl="RestaurantOperations/EditRestaurant.aspx" />
+    <item Text="Restoran Sil" NavigateUrl="RestaurantOperations/DeleteRestaurant.aspx" />
   </group>
   <group Text="Restoran Oyla">
     <item Text="Puanla"  NavigateUrl="#"  />
