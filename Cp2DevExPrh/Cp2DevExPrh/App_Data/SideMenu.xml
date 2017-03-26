@@ -11,8 +11,7 @@
     <item Text="Restoran Sil" NavigateUrl="RestaurantOperations/DeleteRestaurant.aspx" />
   </group>
   <group Text="Restoran Oyla">
-    <item Text="Puanla"  NavigateUrl="#"  />
-    <item Text="Puanlamaları İndir" NavigateUrl="#"  />
+    <item Text="Puanla"  NavigateUrl="Point/GivePoint.aspx"  />
   </group>
   <group Text="İstatistikler" NavigateUrl="#"/>
 </menu>
