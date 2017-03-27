@@ -157,6 +157,37 @@ namespace Cp2DevExPrh.Point
                 }
             }
 
+            SqlDataAdapter da2 = new SqlDataAdapter("Select RestoranID,avg(Puan) as Puan from Puanlama  As Average group by RestoranID", dbConnection);
+
+            DataTable ds2 = new DataTable();
+
+            da2.Fill(ds2);
+
+            GridView3.DataSource = ds2;
+
+            GridView3.DataBind();
+            
+
+            String Restoranid;
+            String RestoranOrtalamaPuan;
+
+            foreach (GridViewRow row in GridView3.Rows)
+            {
+                if (row.RowType == DataControlRowType.DataRow)
+                {
+                    Restoranid = row.Cells[0].Text;
+                    RestoranOrtalamaPuan = row.Cells[1].Text;
+
+
+                    SqlCommand cmdd2 = new SqlCommand(" Update Restoran SET Puan ='" + RestoranOrtalamaPuan + "' WHERE   RestoranID ='" + Restoranid + "'", dbConnection);
+                    cmdd2.ExecuteNonQuery();
+
+
+                }
+            }
+
+
+
             dbConnection.Close();
             LoadGrid();
         }
