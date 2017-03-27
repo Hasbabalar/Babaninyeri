@@ -13,9 +13,36 @@ using System.Configuration;
 using System.Data.OleDb;
 using Microsoft.Office;
 using ClosedXML.Excel;
+using OfficeOpenXml;
 
 namespace Cp2DevExPrh.Point
 {
+
+    public static class ExcelPackageExtensions
+    {
+        public static DataTable ToDataTable(this ExcelPackage package)
+        {
+            ExcelWorksheet workSheet = package.Workbook.Worksheets.First();
+            DataTable table = new DataTable();
+            foreach (var firstRowCell in workSheet.Cells[1, 1, 1, workSheet.Dimension.End.Column])
+            {
+                table.Columns.Add(firstRowCell.Text);
+            }
+
+            for (var rowNumber = 2; rowNumber <= workSheet.Dimension.End.Row; rowNumber++)
+            {
+                var row = workSheet.Cells[rowNumber, 1, rowNumber, workSheet.Dimension.End.Column];
+                var newRow = table.NewRow();
+                foreach (var cell in row)
+                {
+                    newRow[cell.Start.Column - 1] = cell.Text;
+                }
+                table.Rows.Add(newRow);
+            }
+            return table;
+        }
+    }
+
     public partial class GivePoint : System.Web.UI.Page
     {
 
@@ -89,6 +116,8 @@ namespace Cp2DevExPrh.Point
         }
 
 
+
+
         protected void Button_Import(object sender, EventArgs e)
         {
             if (FileUpload2.HasFile)
@@ -96,45 +125,15 @@ namespace Cp2DevExPrh.Point
                 string path = string.Concat(Server.MapPath("~/File/" + FileUpload2.FileName));
                 FileUpload2.SaveAs(path);
 
-                OleDbConnection OleDbcon;
-                OleDbCommand cmd = new OleDbCommand(); ;
-                OleDbDataAdapter objAdapter1 = new OleDbDataAdapter();
-                DataSet ds = new DataSet();
-                DataTable dtExcelData = new DataTable();
-
-                if (Path.GetExtension(path) == ".xls")
+                if (FileUpload2.HasFile)
                 {
-                    OleDbcon = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + "; Extended Properties=\"Excel 8.0;HDR=Yes;IMEX=2\"");
-                    OleDbcon.Open();
-                    cmd.Connection = OleDbcon;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT * FROM [Puanlama$]";
-                    objAdapter1 = new OleDbDataAdapter(cmd);
-                    objAdapter1.Fill(ds);
-                    dtExcelData = ds.Tables[0];
-                    GridView2.DataSource = dtExcelData;
-                    GridView2.DataBind();
-                    OleDbcon.Close();
+                    if (Path.GetExtension(FileUpload2.FileName) == ".xlsx")
+                    {
+                        ExcelPackage package = new ExcelPackage(FileUpload2.FileContent);
+                        GridView2.DataSource = package.ToDataTable();
+                        GridView2.DataBind();
+                    }
                 }
-                else if (Path.GetExtension(path) == ".xlsx")
-                {
-                    OleDbcon = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + "; Extended Properties='Excel 12.0;HDR=YES;IMEX=1;';");
-                    OleDbcon.Open();
-                    cmd.Connection = OleDbcon;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT * FROM [Puanlama$]";
-                    objAdapter1 = new OleDbDataAdapter(cmd);
-                    objAdapter1.Fill(ds);
-                    dtExcelData = ds.Tables[0];
-                    GridView2.DataSource = dtExcelData;
-
-
-
-
-                    GridView2.DataBind();
-                    OleDbcon.Close();
-                }
-
 
 
             }
