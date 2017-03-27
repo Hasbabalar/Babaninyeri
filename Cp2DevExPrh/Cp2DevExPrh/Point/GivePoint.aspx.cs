@@ -128,6 +128,9 @@ namespace Cp2DevExPrh.Point
                     dtExcelData = ds.Tables[0];
                     GridView2.DataSource = dtExcelData;
 
+
+
+
                     GridView2.DataBind();
                     OleDbcon.Close();
                 }
