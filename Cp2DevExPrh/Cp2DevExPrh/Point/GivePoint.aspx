@@ -5,7 +5,7 @@
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
 
     
-        
+    <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
     
     <dx:ASPxButton ID="Button1" runat="server" Text="Excel Indir" OnClick="Button_Download" />
     <h4><asp:Literal ID="ltConnecitonMessage" runat="server" /></h4>

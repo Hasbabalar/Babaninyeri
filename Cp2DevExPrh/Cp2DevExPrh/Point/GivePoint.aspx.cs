@@ -58,6 +58,9 @@ namespace Cp2DevExPrh.Point
 
         protected void Button_Download(object sender, EventArgs e)
         {
+
+           
+
             DataTable dt = new DataTable("Puanlama");
             foreach (TableCell cell in GridView1.HeaderRow.Cells)
             {
@@ -65,11 +68,16 @@ namespace Cp2DevExPrh.Point
             }
             foreach (GridViewRow row in GridView1.Rows)
             {
-                dt.Rows.Add();
-                for (int i = 0; i < row.Cells.Count; i++)
+                if (row.Cells[0].Text==DropDownList1.Text)
                 {
-                    dt.Rows[dt.Rows.Count - 1][i] = row.Cells[i].Text;
+                    dt.Rows.Add();
+                    for (int i = 0; i < row.Cells.Count; i++)
+                    {
+                        dt.Rows[dt.Rows.Count - 1][i] = row.Cells[i].Text;
+                    }
+
                 }
+                
             }
             using (XLWorkbook wb = new XLWorkbook())
             {
@@ -103,7 +111,23 @@ namespace Cp2DevExPrh.Point
 
             dbConnection.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter("Select Kullanici.KullaniciAdi,Kullanici.KullaniciMaili,Restoran.Ad,Puanlama.Puan from Puanlama INNER JOIN  Kullanici ON Kullanici.KullaniciID = Puanlama.KullaniciID INNER JOIN  Restoran ON Restoran.RestoranID = Puanlama.RestoranID", dbConnection);
+            SqlCommand cmd = new SqlCommand("Select KullaniciAdi from Kullanici", dbConnection);
+
+            SqlDataAdapter da5 = new SqlDataAdapter(cmd);
+
+            DataSet ds5 = new DataSet();
+            da5.Fill(ds5);
+
+            DropDownList1.DataTextField = ds5.Tables[0].Columns["KullaniciAdi"].ToString();
+            
+
+            DropDownList1.DataSource = ds5.Tables[0];
+            DropDownList1.DataBind();
+
+
+
+
+            SqlDataAdapter da = new SqlDataAdapter("Select Kullanici.KullaniciAdi,Kullanici.KullaniciMaili,Restoran.Ad,Puanlama.Puan from Puanlama INNER JOIN  Kullanici ON Kullanici.KullaniciID = Puanlama.KullaniciID INNER JOIN  Restoran ON Restoran.RestoranID = Puanlama.RestoranID order by Restoran.Ad ASC", dbConnection);
 
             DataTable ds = new DataTable();
 

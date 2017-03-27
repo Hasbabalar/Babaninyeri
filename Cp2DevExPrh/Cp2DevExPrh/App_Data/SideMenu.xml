@@ -13,5 +13,5 @@
   <group Text="Restoran Oyla">
     <item Text="Puanla"  NavigateUrl="Point/GivePoint.aspx"  />
   </group>
-  <group Text="İstatistikler" NavigateUrl="#"/>
+  <group Text="İstatistikler" NavigateUrl="Statistics.aspx"/>
 </menu>

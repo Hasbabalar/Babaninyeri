@@ -214,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AlgorithmAndSendEmail.aspx" />
+    <Content Include="Statistics.aspx" />
     <Content Include="UserOperations\AddUser.aspx" />
     <Content Include="UserOperations\DeleteUser.aspx" />
     <Content Include="UserOperations\EditUser.aspx" />
@@ -286,6 +287,13 @@
     </Compile>
     <Compile Include="AlgorithmAndSendEmail.aspx.designer.cs">
       <DependentUpon>AlgorithmAndSendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.aspx.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistics.aspx.designer.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserOperations\AddUser.aspx.cs">
       <DependentUpon>AddUser.aspx</DependentUpon>
