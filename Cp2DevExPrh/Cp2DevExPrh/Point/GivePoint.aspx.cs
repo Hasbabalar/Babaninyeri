@@ -14,6 +14,7 @@ using System.Data.OleDb;
 using Microsoft.Office;
 using ClosedXML.Excel;
 using OfficeOpenXml;
+using System.Globalization;
 
 namespace Cp2DevExPrh.Point
 {
@@ -22,7 +23,9 @@ namespace Cp2DevExPrh.Point
     {
         public static DataTable ToDataTable(this ExcelPackage package)
         {
-            ExcelWorksheet workSheet = package.Workbook.Worksheets.First();
+           
+                ExcelWorksheet workSheet = package.Workbook.Worksheets.First();
+            
             DataTable table = new DataTable();
             foreach (var firstRowCell in workSheet.Cells[1, 1, 1, workSheet.Dimension.End.Column])
             {
@@ -91,10 +94,14 @@ namespace Cp2DevExPrh.Point
 
                 using (MemoryStream MyMemoryStream = new MemoryStream())
                 {
-                    wb.SaveAs(MyMemoryStream);
-                    MyMemoryStream.WriteTo(Response.OutputStream);
-                    Response.Flush();
-                    Response.End();
+                    
+                        wb.SaveAs(MyMemoryStream, false);
+                        MyMemoryStream.WriteTo(Response.OutputStream);
+                        Response.Flush();
+                        Response.End();
+
+                    
+
                 }
             }
 
@@ -182,7 +189,8 @@ namespace Cp2DevExPrh.Point
 
                 }
             }
-
+            dbConnection.Close();
+            dbConnection.Open();
             SqlDataAdapter da2 = new SqlDataAdapter("Select RestoranID,avg(Puan) as Puan from Puanlama  As Average group by RestoranID", dbConnection);
 
             DataTable ds2 = new DataTable();
@@ -203,9 +211,8 @@ namespace Cp2DevExPrh.Point
                 {
                     Restoranid = row.Cells[0].Text;
                     RestoranOrtalamaPuan = row.Cells[1].Text;
-
-
-                    SqlCommand cmdd2 = new SqlCommand(" Update Restoran SET Puan ='" + RestoranOrtalamaPuan + "' WHERE   RestoranID ='" + Restoranid + "'", dbConnection);
+                    float x = float.Parse(RestoranOrtalamaPuan, CultureInfo.InvariantCulture.NumberFormat);
+                    SqlCommand cmdd2 = new SqlCommand(" Update Restoran SET Puan ='" + x + "' WHERE   RestoranID ='" + Restoranid + "'", dbConnection);
                     cmdd2.ExecuteNonQuery();
 
 
