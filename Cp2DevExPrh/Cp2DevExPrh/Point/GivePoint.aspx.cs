@@ -211,7 +211,9 @@ namespace Cp2DevExPrh.Point
                 {
                     Restoranid = row.Cells[0].Text;
                     RestoranOrtalamaPuan = row.Cells[1].Text;
+
                     float x = float.Parse(RestoranOrtalamaPuan, CultureInfo.InvariantCulture.NumberFormat);
+
                     SqlCommand cmdd2 = new SqlCommand(" Update Restoran SET Puan ='" + x + "' WHERE   RestoranID ='" + Restoranid + "'", dbConnection);
                     cmdd2.ExecuteNonQuery();
 
