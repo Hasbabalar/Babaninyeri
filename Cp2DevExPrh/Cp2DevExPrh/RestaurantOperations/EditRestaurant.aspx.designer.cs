@@ -13,24 +13,6 @@ namespace Cp2DevExPrh.RestaurantOperations {
     public partial class EditRestaurant {
         
         /// <summary>
-        /// tbRestaurantName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbRestaurantName;
-        
-        /// <summary>
-        /// btnEditRestoran control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnEditRestoran;
-        
-        /// <summary>
         /// tbEditRestaurantName control.
         /// </summary>
         /// <remarks>
@@ -46,7 +28,7 @@ namespace Cp2DevExPrh.RestaurantOperations {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbEditRestaurantTransportationType;
+        protected global::System.Web.UI.WebControls.DropDownList tbEditRestaurantTransportationType;
         
         /// <summary>
         /// tbEditRestaurantWeatherType control.
@@ -55,7 +37,7 @@ namespace Cp2DevExPrh.RestaurantOperations {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbEditRestaurantWeatherType;
+        protected global::System.Web.UI.WebControls.DropDownList tbEditRestaurantWeatherType;
         
         /// <summary>
         /// btnEditRestaurant control.

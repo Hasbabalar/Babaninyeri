@@ -59,7 +59,13 @@ namespace Cp2DevExPrh.RestaurantOperations
 
                 if (isValidRestaurantName == true )
                 {
-                    int weather = Convert.ToInt32(RestaurantWeatherType);
+                    int weather;
+                    if (RestaurantWeatherType == "Duyarlı")
+                        weather = 1;
+                    else
+                        weather = 0;
+
+
                     /// Burası daha bi düzenlenecek. şimdilik idare etsin.
                     String insertQuery = "INSERT INTO dbo.Restoran (Ad,Ulasim,HavaDurumu) VALUES ('" + RestaurantName + "','" + RestaurantTransportationType + "','" + weather + "' );";
 

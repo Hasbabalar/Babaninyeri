@@ -270,6 +270,7 @@
     </Compile>
     <Compile Include="RestaurantOperations\EditRestaurant.aspx.cs">
       <DependentUpon>EditRestaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="RestaurantOperations\EditRestaurant.aspx.designer.cs">
       <DependentUpon>EditRestaurant.aspx</DependentUpon>
