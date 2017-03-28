@@ -31,15 +31,6 @@ namespace Cp2DevExPrh.Point {
         protected global::DevExpress.Web.ASPxButton Button1;
         
         /// <summary>
-        /// ltConnecitonMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltConnecitonMessage;
-        
-        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
